@@ -14,36 +14,18 @@ ___
 * Develop problems that can be given to a developer and create solutions. 
 * Highlights
 ```
-/*Q15. Write a function that shows the total quantity going to each region of specified country*/
-USE Northwinds2020TSQLV6;
-DROP FUNCTION IF EXISTS dbo.UnitsToCountry;
-
-GO
-CREATE FUNCTION dbo.UnitsToCountry
-(
-    @Country NVARCHAR(50)
-)
-RETURNS TABLE
-AS
-RETURN SELECT SUM(SOD.Quantity) AS TotalUnits,
-              SO.ShipToRegion
-       FROM Sales.[Order] AS SO
-           LEFT JOIN Sales.[OrderDetail] AS SOD
-               ON SO.OrderId = SOD.OrderId
-           LEFT JOIN Sales.[Customer] AS SC
-               ON SO.CustomerId = SC.CustomerId
-       GROUP BY SO.ShipToRegion,
-                SO.ShipToCountry
-       HAVING SO.ShipToCountry = @Country;
-GO
-
-DECLARE @COUNTRY NVARCHAR(50);
-SET @COUNTRY = 'USA';
-
-SELECT C.ShipToRegion,
-       C.TotalUnits
-FROM dbo.UnitsToCountry(@COUNTRY) AS C
-ORDER BY C.ShipToRegion;
+/*Q10. Show Products that are no longer in stock (Quantity Zero)*/
+USE AdventureWorks2017;
+SELECT PP.ProductID,
+       PP.Name,
+       PINV.Quantity
+FROM Production.[Product] AS PP
+    LEFT OUTER JOIN Production.[ProductInventory] AS PINV
+        ON PP.ProductID = PINV.ProductID
+GROUP BY PP.ProductID,
+         PP.Name,
+         PINV.Quantity
+HAVING SUM(PINV.Quantity) = 0;
 ```
 <img src = "Project%201/Images/P01_01.png" width = "200">
 
