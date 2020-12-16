@@ -9,7 +9,7 @@ ___
 
 ### [Project 1](https://github.com/eng-jonathan/Databases/tree/main/Project%201)
 * [Project Specifications](https://github.com/eng-jonathan/Databases/blob/main/Project%201/Project%20One%20Specifications.pdf)
-* [Personal Queries:](https://github.com/eng-jonathan/Databases/blob/main/Project%201/Query%20Files/Jonathan%20Eng/Group%204%20-%20Jonathan%20Eng.sql)      
+* [Personal Queries](https://github.com/eng-jonathan/Databases/blob/main/Project%201/Query%20Files/Jonathan%20Eng/Group%204%20-%20Jonathan%20Eng.sql)      
 * Develop problems that can be given to a developer and create solutions. 
 ___
 <a name="p2"></a>
