@@ -81,6 +81,7 @@ HAVING MAX(Multi_Department_Instructors.Quantity) > 1
 ORDER BY Num_Departments DESC
 ```
 <img src = "Project%203/Images/P03_01.png" width = "250">
+
 ```
 /*Shows the Amount & Percentage of Professors Teaching in Each Department*/
 SELECT DISTINCT DepartmentName, COUNT(InstructorFullName) AS Num_Intstructors, 
