@@ -75,6 +75,7 @@ GROUP BY DepartmentName
 ORDER BY Num_Intstructors DESC
 ```
 <img src = "Project%203/Images/P03_02.png" width = "250">
+
 ___
 <a name="overview"></a>
 
