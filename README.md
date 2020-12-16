@@ -12,6 +12,40 @@ ___
 * [Personal Queries](https://github.com/eng-jonathan/Databases/blob/main/Project%201/Query%20Files/Jonathan%20Eng/Group%204%20-%20Jonathan%20Eng.sql)      
 * [Presentation](https://github.com/eng-jonathan/Databases/blob/main/Project%201/Presentation/1045%20-%20Group%204%20-%20Group%20Project%201.pdf)
 * Develop problems that can be given to a developer and create solutions. 
+* Highlights
+```
+--Complex Q15.C3
+/*15. Write a function that shows the total quantity going to each region of specified country*/
+USE Northwinds2020TSQLV6;
+DROP FUNCTION IF EXISTS dbo.UnitsToCountry;
+
+GO
+CREATE FUNCTION dbo.UnitsToCountry
+(
+    @Country NVARCHAR(50)
+)
+RETURNS TABLE
+AS
+RETURN SELECT SUM(SOD.Quantity) AS TotalUnits,
+              SO.ShipToRegion
+       FROM Sales.[Order] AS SO
+           LEFT JOIN Sales.[OrderDetail] AS SOD
+               ON SO.OrderId = SOD.OrderId
+           LEFT JOIN Sales.[Customer] AS SC
+               ON SO.CustomerId = SC.CustomerId
+       GROUP BY SO.ShipToRegion,
+                SO.ShipToCountry
+       HAVING SO.ShipToCountry = @Country;
+GO
+
+DECLARE @COUNTRY NVARCHAR(50);
+SET @COUNTRY = 'USA';
+
+SELECT C.ShipToRegion,
+       C.TotalUnits
+FROM dbo.UnitsToCountry(@COUNTRY) AS C
+ORDER BY C.ShipToRegion;
+```
 ___
 <a name="p2"></a>
 
