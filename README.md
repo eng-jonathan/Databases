@@ -46,7 +46,7 @@ SELECT C.ShipToRegion,
 FROM dbo.UnitsToCountry(@COUNTRY) AS C
 ORDER BY C.ShipToRegion;
 ```
-<img src = "Project%201/Images/P01_01.png" width = "250">
+<img src = "Project%201/Images/P01_01.png" width = "150">
 
 ___
 <a name="p2"></a>
@@ -80,7 +80,7 @@ GROUP BY Multi_Department_Instructors.InstructorFullName
 HAVING MAX(Multi_Department_Instructors.Quantity) > 1
 ORDER BY Num_Departments DESC
 ```
-<img src = "Project%203/Images/P03_01.png" width = "250">
+<img src = "Project%203/Images/P03_01.png" width = "150">
 
 ```
 /*Shows the Amount & Percentage of Professors Teaching in Each Department*/
@@ -93,7 +93,7 @@ FROM Department.[Instructor]
 GROUP BY DepartmentName
 ORDER BY Num_Intstructors DESC
 ```
-<img src = "Project%203/Images/P03_02.png" width = "250">
+<img src = "Project%203/Images/P03_02.png" width = "150">
 ___
 <a name="overview"></a>
 
