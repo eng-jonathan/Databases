@@ -27,7 +27,7 @@ GROUP BY PP.ProductID,
          PINV.Quantity
 HAVING SUM(PINV.Quantity) = 0;
 ```
-<img src = "Project%201/Images/P01_1.png" width = "200">
+<img src = "Project%201/Images/P01_1.png" width = "250">
 
 ___
 <a name="p2"></a>
