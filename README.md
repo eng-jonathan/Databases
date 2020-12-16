@@ -46,7 +46,7 @@ SELECT C.ShipToRegion,
 FROM dbo.UnitsToCountry(@COUNTRY) AS C
 ORDER BY C.ShipToRegion;
 ```
-<img src = "Images/P01_01.png" width = "300">
+<img src = "Images/P01_01.png", width = "300">
 ___
 <a name="p2"></a>
 
