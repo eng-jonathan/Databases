@@ -12,7 +12,7 @@ ___
 * [Personal Queries](https://github.com/eng-jonathan/Databases/blob/main/Project%201/Query%20Files/Jonathan%20Eng/Group%204%20-%20Jonathan%20Eng.sql)      
 * [Presentation](https://github.com/eng-jonathan/Databases/blob/main/Project%201/Presentation/1045%20-%20Group%204%20-%20Group%20Project%201.pdf)
 * Develop problems that can be given to a developer and create solutions. 
-* Highlights
+* Highlight(s)
 ```
 /*Q10. Show Products that are no longer in stock (Quantity Zero)*/
 USE AdventureWorks2017;
@@ -45,7 +45,7 @@ ___
 * Personal Stored Procedure: [Department.Instructor](https://github.com/eng-jonathan/Databases/blob/main/Project%203/Stored%20Procedures/Jonathan%20Eng/G10_4.uvw_Instructor.sql)
 * Personal Queries: [Multi_Department_Insturctors](https://github.com/eng-jonathan/Databases/blob/main/Project%203/Queries/Jonathan%20Eng/Query1.Mult_Dept_Instructors.sql) | [%Instructors_Per_Department](https://github.com/eng-jonathan/Databases/blob/main/Project%203/Queries/Jonathan%20Eng/FreeQuery.Percent_Instructor_PerDept.sql)
 * Design and Create a new Databse (*QueensClassScheduleCurrentSemester*) from the single table (*CoursesCurrentSemester*). Create and Document stored procedures to load each of the individual tables based on your databse design.
-* Highlights
+* Highlight(s)
 ```
 /*Q1: Shows Instructors that teach in Multiiple Departments*/
 SELECT DISTINCT Multi_Department_Instructors.InstructorFullName, MAX(Multi_Department_Instructors.Quantity) AS Num_Departments
