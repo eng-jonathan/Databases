@@ -2,7 +2,7 @@
 
 # Databases 
 [Project 1](#p1) | 
-[Project 2](#p2)|
+[Project 2](#p2) |
 [Project 3](#p3)
 ___
 <a name="p1"></a>
