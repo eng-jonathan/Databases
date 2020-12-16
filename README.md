@@ -19,7 +19,7 @@ ___
 * [Project Specifications](https://github.com/eng-jonathan/Databases/blob/main/Project%201/Project%20One%20Specifications.pdf) 
 * Personal Stored Procedures: [Load_DimProductCategory](https://github.com/eng-jonathan/Databases/blob/main/Project%202/Stored%20Procedures/Jonathan%20Eng/Project2.Load_DimProductCategory.sql) | [Load_DimProductSubCategory](https://github.com/eng-jonathan/Databases/blob/main/Project%202/Stored%20Procedures/Jonathan%20Eng/Project2.Load_DimProductSubCategory.sql)
 * Presentations: [JDBC](https://github.com/eng-jonathan/Databases/blob/main/Project%202/Presentations/1045_G4_Group_Project_2%20(JDBC).pdf) | [System Lifecycle & SSMS](https://github.com/eng-jonathan/Databases/blob/main/Project%202/Presentations/1045_G4_Group_Project_2%20(System%20Lifecycle%20%26%20SSMS).pdf)
-* Recreate the BIClass Database Star Schema using the Original Data Table. Modify all primary keys to eliminate the identity key and use sequence objects in thier place. 
+* Recreate the *BIClass Database Star Schema* using the Original Data Table. Modify all primary keys to eliminate the identity key and use sequence objects in thier place. 
 ___ 
 <a name="p3"></a>
 
