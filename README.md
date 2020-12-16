@@ -9,6 +9,20 @@ ___
 
 ### [Project 1](https://github.com/eng-jonathan/Databases/tree/main/Project%201)
 * [Project Specifications](https://github.com/eng-jonathan/Databases/blob/main/Project%201/Project%20One%20Specifications.pdf)
+* [Personal Queries:](https://github.com/eng-jonathan/Databases/blob/main/Project%201/Query%20Files/Jonathan%20Eng/Group%204%20-%20Jonathan%20Eng.sql)
+* Highlights
+
+--Easy Q5.E5
+--Show the Supplier for each Product
+USE Northwinds2020TSQLV6;
+SELECT PP.ProductId,
+       PS.SupplierCompanyName
+FROM Production.[Product] AS PP
+    LEFT OUTER JOIN Production.[Supplier] AS PS
+        ON PS.SupplierId = PP.SupplierId
+ORDER BY PP.ProductId,
+         PS.SupplierCompanyName;  
+         
 * Develop problems that can be given to a developer and create solutions. 
 ___
 <a name="p2"></a>
