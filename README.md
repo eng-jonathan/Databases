@@ -14,39 +14,20 @@ ___
 * Develop problems that can be given to a developer and create solutions. 
 * Highlights
 ```
---Complex Q15.C3
-/*15. Write a function that shows the total quantity going to each region of specified country*/
-USE Northwinds2020TSQLV6;
-DROP FUNCTION IF EXISTS dbo.UnitsToCountry;
-
-GO
-CREATE FUNCTION dbo.UnitsToCountry
-(
-    @Country NVARCHAR(50)
-)
-RETURNS TABLE
-AS
-RETURN SELECT SUM(SOD.Quantity) AS TotalUnits,
-              SO.ShipToRegion
-       FROM Sales.[Order] AS SO
-           LEFT JOIN Sales.[OrderDetail] AS SOD
-               ON SO.OrderId = SOD.OrderId
-           LEFT JOIN Sales.[Customer] AS SC
-               ON SO.CustomerId = SC.CustomerId
-       GROUP BY SO.ShipToRegion,
-                SO.ShipToCountry
-       HAVING SO.ShipToCountry = @Country;
-GO
-
-DECLARE @COUNTRY NVARCHAR(50);
-SET @COUNTRY = 'USA';
-
-SELECT C.ShipToRegion,
-       C.TotalUnits
-FROM dbo.UnitsToCountry(@COUNTRY) AS C
-ORDER BY C.ShipToRegion;
+/*Q10. Show Products that are no longer in stock (Quantity Zero)*/
+USE AdventureWorks2017;
+SELECT PP.ProductID,
+       PP.Name,
+       PINV.Quantity
+FROM Production.[Product] AS PP
+    LEFT OUTER JOIN Production.[ProductInventory] AS PINV
+        ON PP.ProductID = PINV.ProductID
+GROUP BY PP.ProductID,
+         PP.Name,
+         PINV.Quantity
+HAVING SUM(PINV.Quantity) = 0;
 ```
-<img src = "Project%201/Images/P01_01.png" width = "250">
+<img src = "Project%201/Images/P01_01.png" width = "200">
 
 ___
 <a name="p2"></a>
@@ -64,7 +45,36 @@ ___
 * Personal Stored Procedure: [Department.Instructor](https://github.com/eng-jonathan/Databases/blob/main/Project%203/Stored%20Procedures/Jonathan%20Eng/G10_4.uvw_Instructor.sql)
 * Personal Queries: [Multi_Department_Insturctors](https://github.com/eng-jonathan/Databases/blob/main/Project%203/Queries/Jonathan%20Eng/Query1.Mult_Dept_Instructors.sql) | [%Instructors_Per_Department](https://github.com/eng-jonathan/Databases/blob/main/Project%203/Queries/Jonathan%20Eng/FreeQuery.Percent_Instructor_PerDept.sql)
 * Design and Create a new Databse (*QueensClassScheduleCurrentSemester*) from the single table (*CoursesCurrentSemester*). Create and Document stored procedures to load each of the individual tables based on your databse design.
+* Highlights
+```
+/*Q1: Shows Instructors that teach in Multiiple Departments*/
+SELECT DISTINCT Multi_Department_Instructors.InstructorFullName, MAX(Multi_Department_Instructors.Quantity) AS Num_Departments
+FROM (
+	SELECT DISTINCT InstructorFullName, 
+	DENSE_RANK() OVER
+		(PARTITION BY InstructorFullName ORDER BY DepartmentName) AS Quantity
+	FROM Department.[Instructor]
+	GROUP BY InstructorFullName,
+			 DepartmentName
+	HAVING InstructorFullName <> 'TBA') AS Multi_Department_Instructors
+GROUP BY Multi_Department_Instructors.InstructorFullName
+HAVING MAX(Multi_Department_Instructors.Quantity) > 1
+ORDER BY Num_Departments DESC
+```
+<img src = "Project%203/Images/P03_01.png" width = "250">
 
+```
+/*Q2: Shows the Amount & Percentage of Professors Teaching in Each Department*/
+SELECT DISTINCT DepartmentName, COUNT(InstructorFullName) AS Num_Intstructors, 
+CONCAT( CAST(COUNT(InstructorFullName) * 100.00/ 
+	(SELECT COUNT(InstructorFullName) FROM Department.Instructor) AS DECIMAL (5,2) ), '%') 
+	AS Pct_Of_Instructors
+
+FROM Department.[Instructor]
+GROUP BY DepartmentName
+ORDER BY Num_Intstructors DESC
+```
+<img src = "Project%203/Images/P03_02.png" width = "250">
 ___
 <a name="overview"></a>
 
