@@ -14,8 +14,7 @@ ___
 * Develop problems that can be given to a developer and create solutions. 
 * Highlights
 ```
---Complex Q15.C3
-/*15. Write a function that shows the total quantity going to each region of specified country*/
+/*Q15. Write a function that shows the total quantity going to each region of specified country*/
 USE Northwinds2020TSQLV6;
 DROP FUNCTION IF EXISTS dbo.UnitsToCountry;
 
