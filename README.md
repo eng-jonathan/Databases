@@ -90,5 +90,4 @@ ___
 * Understanding subject areas in ERD diagrams and how to create them within the SSMS database environment
 * Importing and exporting data to/from the database
 * Creating reports using SSRS/ReportBuilder 2016
-
-[Return to Top](#TOP)
+___
