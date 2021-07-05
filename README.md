@@ -1,13 +1,13 @@
 <a name="TOP"></a>
 
 # Databases 
-[Project 1](#p1) | 
-[Project 2](#p2) |
-[Project 3](#p3)
+[Cuustom Procedure](#p1) | 
+[Star Schema Recreation](#p2) |
+[School Database Designing](#p3)
 ___
 <a name="p1"></a>
  
-### [Cuustom Procedure Creation](https://github.com/eng-jonathan/Databases/tree/main/Project%201)
+### [Cuustom Procedures](https://github.com/eng-jonathan/Databases/tree/main/Project%201)
 * [Project Specifications](https://github.com/eng-jonathan/Databases/blob/main/Project%201/Project%20One%20Specifications.pdf)
 * [Personal Queries](https://github.com/eng-jonathan/Databases/blob/main/Project%201/Query%20Files/Jonathan%20Eng/Group%204%20-%20Jonathan%20Eng.sql)      
 * [Presentation](https://github.com/eng-jonathan/Databases/blob/main/Project%201/Presentation/1045%20-%20Group%204%20-%20Group%20Project%201.pdf)
