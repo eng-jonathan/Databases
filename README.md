@@ -1,9 +1,4 @@
 <a name="TOP"></a>
-
-# Databases 
-[Cuustom Procedure](#p1) | 
-[Star Schema Recreation](#p2) |
-[School Database Designing](#p3)
 ___
 <a name="p1"></a>
  
