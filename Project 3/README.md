@@ -23,7 +23,7 @@ GROUP BY Multi_Department_Instructors.InstructorFullName
 HAVING MAX(Multi_Department_Instructors.Quantity) > 1
 ORDER BY Num_Departments DESC
 ```
-<img src = "Project%203/Images/P03_01.png" width = "250">
+<img src = "Images/P03_01.png" width = "250">
 
 ```
 /*Q2: Shows the Amount & Percentage of Professors Teaching in Each Department*/
@@ -36,4 +36,4 @@ FROM Department.[Instructor]
 GROUP BY DepartmentName
 ORDER BY Num_Intstructors DESC
 ```
-<img src = "Project%203/Images/P03_02.png" width = "250">
+<img src = "Images/P03_02.png" width = "250">
