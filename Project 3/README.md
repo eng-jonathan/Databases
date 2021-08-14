@@ -1,9 +1,10 @@
-### [School Database Designing](https://github.com/eng-jonathan/Databases/tree/main/Project%203)
+# [School Database Designing](https://github.com/eng-jonathan/Databases/tree/main/Project%203)
 * [Project Specifications](https://github.com/eng-jonathan/Databases/blob/main/Project%203/Project%203%20Specifications.pdf)
 * Personal Stored Procedure: [Department.Instructor](https://github.com/eng-jonathan/Databases/blob/main/Project%203/Stored%20Procedures/Jonathan%20Eng/G10_4.uvw_Instructor.sql)
 * Personal Queries: [Multi_Department_Insturctors](https://github.com/eng-jonathan/Databases/blob/main/Project%203/Queries/Jonathan%20Eng/Query1.Mult_Dept_Instructors.sql) | [%Instructors_Per_Department](https://github.com/eng-jonathan/Databases/blob/main/Project%203/Queries/Jonathan%20Eng/FreeQuery.Percent_Instructor_PerDept.sql)
 * Design and Create a new Databse (*QueensClassScheduleCurrentSemester*) from the single table (*CoursesCurrentSemester*). Create and Document stored procedures to load each of the individual tables based on your databse design.
-* Highlight(s)
+
+### Highlight(s)
 ```
 /*Q1: Shows Instructors that teach in Multiiple Departments*/
 SELECT DISTINCT Multi_Department_Instructors.InstructorFullName, 
