@@ -78,7 +78,7 @@ ___
 <a name="overview"></a>
 
 ### Course Overview:
-[Syllabus](https://github.com/eng-jonathan/Databases/blob/main/syllabus/syllabus.pdf)
+* [Syllabus](https://github.com/eng-jonathan/Databases/blob/main/syllabus/syllabus.pdf)
 * Develop SQL Querying solutions through critical thinking skills in a professional work environment as a team member or leader
 * Understanding how to write relational calculi expressions based upon your TSQL querying knowledge
 * Understanding and working with metadata and taxonomies
