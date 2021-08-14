@@ -1,6 +1,6 @@
 <a name="TOP"></a>
 
-# Databases (Microsoft SQL Management Studio, TSQL) 
+# Databases
 ___
 <a name="p1"></a>
  
