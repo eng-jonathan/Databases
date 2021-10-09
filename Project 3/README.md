@@ -27,6 +27,7 @@ CREATE TABLE [Department].[Instructor]
 );
 ```
 ---
+### Queries for Data Analysis
 ```
 /*Q1: Shows Instructors that teach in Multiiple Departments*/
 SELECT DISTINCT Multi_Department_Instructors.InstructorFullName, 
