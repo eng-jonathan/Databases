@@ -26,7 +26,7 @@ CREATE TABLE [Department].[Instructor]
         DEFAULT SYSDATETIME()
 );
 ```
-
+---
 ```
 /*Q1: Shows Instructors that teach in Multiiple Departments*/
 SELECT DISTINCT Multi_Department_Instructors.InstructorFullName, 
