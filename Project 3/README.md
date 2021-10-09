@@ -10,6 +10,24 @@
 
 ### Highlight(s)
 ```
+/* Creation of Table for Instructors within Departments */
+CREATE TABLE [Department].[Instructor]
+(
+	[InstructorKey] [Udt].[SurrogateKeyInt] NOT NULL IDENTITY PRIMARY KEY, 
+	[InstructorFirstName] [Udt].[Name] NULL,
+	[InstructorLastName] [Udt].[Name] NULL,
+	[InstructorFullName] [Udt].[Name] NULL,
+	[DepartmentName] [Udt].[DepartmentName] NULL,
+	[DepartmentKey] [Udt].[SurrogateKeyInt] NULL,
+	[UserAuthorizationKey] [Udt].[SurrogateKeyInt] NOT NULL,
+    [DateAdded] [Udt].[DateOf] NULL
+        DEFAULT SYSDATETIME(),
+    [DateOfLastUpdate] [Udt].[DateOf] NULL
+        DEFAULT SYSDATETIME()
+);
+```
+
+```
 /*Q1: Shows Instructors that teach in Multiiple Departments*/
 SELECT DISTINCT Multi_Department_Instructors.InstructorFullName, 
 MAX(Multi_Department_Instructors.Quantity) AS Num_Departments
