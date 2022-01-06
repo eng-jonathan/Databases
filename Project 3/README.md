@@ -1,6 +1,11 @@
 <a name="TOP"></a>
 
 # School Database Designing
+
+* Collaborated as a group of 4 to create a database for courses offered at Queens College
+* Developed in ***SQL*** and incorporates table and view creation, custom queries, design decision propositions, and
+procedure and workflow documentation to highlight individual contributions
+
 * [Project Specifications](https://github.com/eng-jonathan/Databases/blob/main/Project%203/Project%203%20Specifications.pdf)
 * [Presentation](https://github.com/eng-jonathan/Databases/blob/main/Project%203/Presentations/Final%20Project%20JDBC%20Presentation.pdf)
 * [Workflow](https://github.com/eng-jonathan/Databases/blob/main/Project%203/Presentations/Final%20Project%20Presentation%20(Work%20%26%20Design).pdf)
