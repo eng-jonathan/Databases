@@ -2,7 +2,7 @@
 
 # School Database Designing
 
-* Collaborated as a group of 4 to create a database for courses offered at Queens College
+* Collaborated as a group of 7 to create a database for courses offered at Queens College
 * Developed in ***SQL*** and incorporates table and view creation, custom queries, design decision propositions, and
 procedure and workflow documentation to highlight individual contributions
 
